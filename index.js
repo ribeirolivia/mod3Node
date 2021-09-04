@@ -15,6 +15,6 @@ app.use("/musicas", musica);
 const filme = require("./routers/filmes.routes");
 app.use("/filme", filme);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.info(`App rodando na porta ${port}`);
 });
